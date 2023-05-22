@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Password Validation</h2>
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one uppercase & lowercase letter and one number and
+            8 or more characters " required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div id="validation">
+        <h3>Password must contain</h3>
+        <p class="invalid" id="letter">A <b>Lowercase Letter</b></p>
+        <p class="invalid" id="capital">A <b>Uppercase Letter</b></p>
+        <p class="invalid" id="number">A <b>Number</b></p>
+        <p class="invalid" id="length">A <b>Minimum 8 characters</b></p>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

@@ -12,8 +12,10 @@ input.onfocus = function () {
 input.onblur = function () {
   document.getElementById("validation").style.display = "none";
 };
+
 //user click on input and type something then the validation box display
 input.onkeyup = function () {
+  
   //Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
   if (input.value.match(lowerCaseLetters)) {
